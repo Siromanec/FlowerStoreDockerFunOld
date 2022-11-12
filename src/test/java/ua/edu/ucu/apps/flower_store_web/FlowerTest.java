@@ -1,13 +1,13 @@
-package flower.store;
+package ua.edu.ucu.apps.flower_store_web;
 
-import flower.store.flower.Flower;
-import flower.store.flower.FlowerColor;
+import ua.edu.ucu.apps.flower_store_web.flower_store.flower.Flower;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Random;
 
 import org.junit.jupiter.api.Assertions;
+import ua.edu.ucu.apps.flower_store_web.flower_store.flower.FlowerColor;
 
 /**
  * test for flowers
@@ -42,7 +42,7 @@ public class FlowerTest {
     @Test
     public void testColor() {
         FlowerColor color = FlowerColor.RED;
-        flower.setColor(color);
-        Assertions.assertEquals("red", flower.getColor());
+        flower.getSpec().setColor(color);
+        Assertions.assertEquals("red", flower.getSpec().getColor().toString());
     }
 }

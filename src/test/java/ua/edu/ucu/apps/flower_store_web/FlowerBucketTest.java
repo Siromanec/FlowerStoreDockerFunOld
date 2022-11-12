@@ -1,12 +1,13 @@
-package flower.store;
+package ua.edu.ucu.apps.flower_store_web;
 
-import flower.store.bucket.FlowerBucket;
-import flower.store.flower.Flower;
-import flower.store.flowerpack.FlowerPack;
-import flower.store.flowers.Rose;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
+import ua.edu.ucu.apps.flower_store_web.item.Item;
+import ua.edu.ucu.apps.flower_store_web.item.bucket.FlowerBucket;
+import ua.edu.ucu.apps.flower_store_web.flower_store.flower.Flower;
+import ua.edu.ucu.apps.flower_store_web.flower_store.flowerpack.FlowerPack;
+import ua.edu.ucu.apps.flower_store_web.flower_store.flowers.Rose;
 
 import java.util.Random;
 
@@ -20,14 +21,14 @@ public class FlowerBucketTest {
     private static final int MAX_QUANTITY = 1000;
     private static final int MAX_PRICE = 100;
 
-    private FlowerBucket flowerBucket;
+    private Item item;
 
     /**
      * setup
      */
     @BeforeEach
     public void init() {
-        flowerBucket = new FlowerBucket();
+        item = new FlowerBucket();
     }
 
     /**
@@ -41,7 +42,7 @@ public class FlowerBucketTest {
         Flower flower = new Rose();
         flower.setPrice(price);
         FlowerPack flowerPack = new FlowerPack(flower, quantity);
-        flowerBucket.add(flowerPack);
-        Assertions.assertEquals(price * quantity, flowerBucket.getPrice());
+        //FlowerBucket.addFlowers(flower);
+        Assertions.assertEquals(price * quantity, item.price());
     }
 }

@@ -1,10 +1,10 @@
-package flower.store;
+package ua.edu.ucu.apps.flower_store_web;
 
-import flower.store.flower.Flower;
-import flower.store.flowerpack.FlowerPack;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ua.edu.ucu.apps.flower_store_web.flower_store.flower.Flower;
+import ua.edu.ucu.apps.flower_store_web.flower_store.flowerpack.FlowerPack;
 
 import java.util.Random;
 
